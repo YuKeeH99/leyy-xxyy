@@ -1,0 +1,11 @@
+build/
+*.o
+*.obj
+*.lib
+*.axf
+*.map
+*.elf
+*.bin
+.DS_Store
+__pycache__/
+*.pyc
