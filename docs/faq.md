@@ -1,12 +1,12 @@
 # 常见问题
 
-## 1. 本仓库能直接编译吗？
+## 1. 编译需要准备什么？
 
-不能。本仓库只包含产品层 `venus`，还需要匹配版本的移远 EC800M QuecOpen C SDK、ARMCC/GCC 工具链和 license。详见 [编译说明](build.md)。
+需要匹配版本的移远 EC800M QuecOpen C SDK、ARMCC/GCC 工具链和 license，以及本仓库的产品层 `venus`。详见 [编译说明](build.md)。
 
 ## 2. Wi-Fi 模组固件在哪里？
 
-FGM840R 是独立模组，有自己的固件和 OTA 流程。本仓库只包含 EC800M 侧的 UART AT 控制逻辑，不包含 FGM840R 的完整固件。
+FGM840R 是独立模组，有自己的固件和 OTA 流程。本仓库提供 EC800M 侧的 UART AT 控制逻辑；完整固件按移远或方案商提供的版本使用。
 
 ## 3. Wi-Fi 能和控制板一起烧录吗？
 

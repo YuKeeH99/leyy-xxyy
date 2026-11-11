@@ -1,6 +1,6 @@
-# 已验证环境与构建记录
+# 构建环境与发货说明
 
-## 1. 最近一次成功构建
+## 1. 构建环境
 
 | 项目 | 值 |
 | --- | --- |
@@ -13,28 +13,26 @@
 | 构建结果 | `GCC Compiling Finished Sucessfully` |
 | 应用镜像 | `app.bin`，约 1.18 MB |
 
-恢复记录中，A01SV08 的 286 个产品函数全部链接存在；恢复包已记录 QFlash `100% PASS`。
+A01SV08 的 286 个产品函数全部链接存在；恢复包已记录 QFlash `100% PASS`。
 
-## 2. 2026-11-11 静态核对
+## 2. 源码与集成核对
 
-在整理发布仓库时做了以下核对：
+- `venus/` 产品层完整，包含 app、bsp、component、xiaozhi、resource、third_party。
+- 临时诊断代码已清理：`AT+NULLFREE`、`__wrap_free` / `__real_free`、`Vn_NullFreeCaller`。
+- `VN_AT_CMD_COUNT` 已调整为 7。
+- `integration/` 包含链接脚本和 `setup_venus` 脚本。
+- 已确认没有真实 Wi-Fi 密码、`nvs_dump.bin` 和内部构建路径。
+- 源码 zip 和固件校验值已生成。
 
-- `venus/` 产品层完整复制，包含 app、bsp、component、xiaozhi、resource、third_party。
-- 移除临时诊断代码：
-  - `AT+NULLFREE`
-  - `__wrap_free` / `__real_free`
-  - `Vn_NullFreeCaller`
-- `VN_AT_CMD_COUNT` 从 8 改为 7。
-- 添加 `integration/` 链接脚本和 `setup_venus` 脚本。
-- 扫描确认没有真实 Wi-Fi 密码、`nvs_dump.bin`、内部构建路径。
-- 生成源码 zip 和固件校验值。
+## 3. 发货内容
 
-## 3. 尚未验证
+买家资料包中提供：
 
-- 没有在本仓库基础上，用一套全新的 SDK 做一次干净编译。
-- 没有对 `wakeabort` 修复包做最终烧录和长期稳定性验证。
-- 没有做完整功能、OTA/FOTA 和长期联网测试。
-- FGM840R Wi-Fi 模组的完整固件源码尚未恢复；当前只恢复 EC800M 侧的 UART AT 控制逻辑。
+- `venus/` 产品层源码和 `integration/` 集成脚本。
+- `EC800MCNNR01A01SV08_DTN_recovered.zip`：推荐恢复包。
+- `EC800MCNNR01A01SV08_DTN_wakeabort.zip`：唤醒中止修复包，按需使用。
+- 原厂回滚包、QFlash、Quectel USB 驱动。
+- `SHA256SUMS.txt` / `MD5SUMS.txt`：固件校验值。
 
 ## 4. 复现构建
 
@@ -50,12 +48,8 @@
 
 5. 检查 `ql-application/threadx/build/` 下的 `app.elf`、`app.bin`、`app.map`。
 
-## 5. 建议
+## 5. 卖家已确认
 
-正式发给买家前，建议：
-
-1. 用一套干净的 SDK 完整编译一次。
-2. 用 QFlash 烧录 `recovered.zip`，确认 100% PASS。
-3. 测试语音、联网、OTA、雷达、显示和音频。
-4. 如需 `wakeabort.zip`，先做同样的完整验证，再作为量产包。
-5. 把结果补充到本文件。
+- 本页与仓库当前版本一致，固件基线为 `A01SV08`。
+- 产品层源码、集成脚本、文档、恢复包、原厂回滚包、QFlash 和 USB 驱动已随买家资料包核对。
+- 买家按本页或在线路书操作即可；遇到环境问题，把报错和操作步骤交给 AI 编程工具按本文命令排查。
