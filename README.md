@@ -144,6 +144,7 @@ build.bat app
 | [协议说明](docs/protocol.md) | AT 命令、OTA/FOTA、Wi-Fi 模组 OTA |
 | [调试说明](docs/debug.md) | AT 检查、日志、dump、地址还原 |
 | [常见问题](docs/faq.md) | Wi-Fi 模组、A01/A02、烧录失败等 |
+| [已验证环境](docs/verified-build.md) | 最近构建环境、已核对项、未验证项 |
 
 ## 版本基线
 
