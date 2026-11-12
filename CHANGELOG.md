@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2026-11-12
+
+- 补齐产品层 32 个头文件和 5 个源文件：`vn_plat.h`、各 BSP / 组件头文件、`vn_at_test_app.c`、`vn_celluar.c`、`vn_http.c`、`vn_lcd_icon.c`、`at_port.c`
+- 补齐 LVGL 8.3.0 缺失的 41 个文件，恢复完整 `third_party/lvgl/src`
+- 产品层 79 个 `.c` 文件逐文件通过 ARM GCC 编译检查
+- 在线路书与 README 恢复“已核对”表述，并增加编译检查状态
+
 ## 2026-11-11
 
 - 首次整理公开发布仓库
