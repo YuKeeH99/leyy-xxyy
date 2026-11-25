@@ -86,6 +86,12 @@ build.bat app
 
 > **编译前置条件**：需要匹配版本的移远 EC800M QuecOpen SDK。SDK 不在仓库里，请从移远官方或方案商获取。
 
+## 接自己的后台（可选）
+
+设备本身不带 ASR / LLM / TTS，需要连一套小智后台。可以直接用现成后台，也可以在本机 / NAS 上用 Docker 自建。
+
+自建步骤、模型配置模板、WebSocket 协议兼容和常见报错，见 ESP32 仓库的共用文档：[接入后台](https://github.com/YuKeeH99/leyy-xxesp/blob/main/docs/board/backend.md)。
+
 ## 卡住了先看这里
 
 | 现象 | 检查方法 |
@@ -146,6 +152,7 @@ build.bat app
 | [编译说明](docs/build.md) | SDK 准备、目录放置、编译、产物 |
 | [烧录说明](docs/flashing.md) | QFlash、AT+QDOWNLOAD、回滚、常见失败 |
 | [协议说明](docs/protocol.md) | AT 命令、OTA/FOTA、Wi-Fi 模组 OTA |
+| [接入后台（共用）](https://github.com/YuKeeH99/leyy-xxesp/blob/main/docs/board/backend.md) | 小智后台、模型配置、协议兼容与排查 |
 | [调试说明](docs/debug.md) | AT 检查、日志、dump、地址还原 |
 | [常见问题](docs/faq.md) | Wi-Fi 模组、A01/A02、烧录失败等 |
 | [构建环境](docs/verified-build.md) | 构建环境、版本、发货核对项 |
