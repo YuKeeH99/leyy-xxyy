@@ -92,6 +92,8 @@ build.bat app
 
 自建步骤、模型配置模板、WebSocket 协议兼容和常见报错，见 ESP32 仓库的共用文档：[接入后台](https://github.com/YuKeeH99/leyy-xxesp/blob/main/docs/board/backend.md)。
 
+后台部署和模型配置两版通用；EC800M 的 OTA 地址在 `venus/app/src/vn_xiaozhi_app.c` 中配置，修改方式见 [协议说明](docs/protocol.md)。
+
 ## 卡住了先看这里
 
 | 现象 | 检查方法 |
